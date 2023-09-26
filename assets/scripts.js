@@ -1,4 +1,6 @@
-$(document).ready(function() {
+
+onload = (event) => {
+    $(document).ready(function() {
     $('.gallery').mauGallery({
         columns: {
             xs: 1,
@@ -12,4 +14,6 @@ $(document).ready(function() {
         showTags: true,
         tagsPosition: 'top'
     });
-});
+});};
+
+
