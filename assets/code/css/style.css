@@ -1,0 +1,654 @@
+@import url('./purged_bootstrap.css');
+
+:root {
+  --navbar-height: 100px;
+  --about-bg-color: #f6d2b8;
+  --about-before-color: #e5975f;
+  --nina-carousel-btns-bg-color: rgba(0, 0, 0, 0.12);
+}
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+#about-me .about-me__introduction,
+.quote__author,
+.quote__text {
+  font-family: serif;
+}
+
+@media (min-width: 481px) {
+  * {
+    font-family: Inter, sans-serif;
+  }
+
+  #about-me .about-me__introduction,
+  .quote__author,
+  .quote__text {
+    font-family: Bitter, serif;
+  }
+}
+
+#about-me .about-me__introduction,
+.quote__author,
+.quote__text {
+  font-family: Bitter, serif;
+}
+
+h1 {
+  margin-bottom: 0 !important;
+  font-weight: 400;
+  font-size: 1.61em;
+}
+
+h2 {
+  font-size: 1.61em;
+  line-height: 1.35em;
+}
+
+h3 {
+  font-size: 1.35em;
+  line-height: 2.25em;
+}
+
+h4 {
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+h3,
+h4 {
+  font-weight: 400;
+}
+
+.quote__text {
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.2em;
+  font-size: 1.4em;
+}
+
+.quote__author {
+  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 2.3em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100vw;
+  max-width: 1920px;
+  margin: auto;
+  font-size: 1em;
+  font-style: normal;
+  line-height: 1rem;
+}
+
+blockquote,
+figure {
+  margin: 0;
+}
+
+.modal {
+  transition: opacity 0.5s;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+
+
+#carouselNinaCarducci .carousel-control-next .carousel-control-next-icon,
+#carouselNinaCarducci .carousel-control-prev .carousel-control-prev-icon {
+  transition: all 0.25s ease-in;
+}
+
+
+
+.top-header {
+  width: 100%;
+  margin: auto;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.top-header h1 {
+  min-width: 175px;
+}
+
+.top-header h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container-fluid.top-header-navbar {
+  padding: 10px 5.2vw 10px 5.2vw;
+}
+
+.top-header nav {
+  min-height: var(--navbar-height);
+}
+
+.navbar-menu li {
+  padding: 0 5px 0 5px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-nav a {
+  color: #000;
+}
+
+#carouselNinaCarducci .carousel-inner {
+  --_computed_height: calc(100vh - var(--navbar-height));
+  min-height: var(--_computed_height);
+  height: var(--_computed_height);
+  width: auto;
+  min-width: auto;
+  transition: height 0.5s;
+}
+
+#carouselNinaCarducci .carousel-item {
+  height: 100%;
+}
+
+#carouselNinaCarducci .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+#about-section {
+  display: flex;
+  background-color: var(--about-bg-color);
+  padding-inline: 100px;
+  padding-block: 100px;
+  position: relative;
+}
+
+.picture.left::before {
+  content: ' ';
+  background-color: var(--about-before-color);
+  width: 374px;
+  height: 329px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.picture {
+  flex: 1;
+  margin: 0 20px;
+  z-index: 0;
+}
+
+.picture img {
+  width: 100%;
+  height: auto;
+}
+
+#about-me {
+  position: relative;
+  left: 2em;
+  flex: 2;
+}
+
+#about-me .about-me__introduction {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.25em;
+  width: 80%;
+  margin-bottom: 20px;
+  line-height: 1.25em;
+}
+
+#about-me p {
+  width: 100%;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.about-me__title {
+  margin-top: 1em;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+#about-section .picture {
+  --_forced_width: 555px;
+  --_forced_height: 553px;
+  width: var(--_forced_width);
+  min-width: var(--_forced_width);
+  height: var(--_forced_height);
+  min-height: var(--_forced_height);
+}
+
+.title {
+  text-align: center;
+  padding-block: 2em;
+  font-weight: 400;
+  font-size: 1.7em;
+}
+
+#maugallery.gallery .nav {
+  justify-content: center;
+}
+
+.gallery .nav-pills .nav-item {
+  line-height: 1rem;
+}
+
+.mau.nav-link,
+.mau.nav-link:hover {
+  transition: none;
+}
+
+.nav-pills .mau.nav-link.active {
+  color: #fff;
+  background-color: #666130;
+  border-radius: 0;
+}
+
+.mau.gallery-placeholder {
+  animation: delayedFadeIn 2s;
+}
+
+.quote {
+  width: 86%;
+  transform: scale(1.035);
+  transition: transform 0.75s;
+  margin: auto;
+  padding-block: 5.6em;
+}
+
+.service p {
+  line-height: 1.5em;
+}
+
+#services-section {
+  margin: auto;
+  background-color: #a8d5d8;
+  position: relative;
+}
+
+#services-section .container::before {
+  content: ' ';
+  background-color: #1c6474;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#services-section .container {
+  justify-content: space-between;
+  display: flex;
+  padding: 2em 0;
+}
+
+.service {
+  background-color: #fff;
+  max-width: 390px;
+  width: 30%;
+  height: 337px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+#services-section ~ .quote {
+  width: 840px;
+  min-height: 232px;
+  max-width: 68%;
+  min-width: 780px;
+}
+
+#maugallery.gallery ~ .quote h2 {
+  min-height: 240px;
+}
+
+#services-section ~ .quote h2 {
+  min-height: 190px;
+}
+
+#contact-section {
+  margin: auto;
+  background-color: #d8d3a8;
+  position: relative;
+  padding-inline: 20px;
+  padding-block: 100px;
+  width: 100%;
+}
+
+#contact-section p {
+  line-height: 1.5em;
+}
+
+#contact-section label {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+#contact-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#contact-section .picture {
+  flex: none;
+}
+
+#contact-section .picture img {
+  width: 419px;
+  height: 418px;
+}
+
+.picture.right::before {
+  content: ' ';
+  background-color: #beb45a;
+  width: 58%;
+  max-width: 30vw;
+  height: 55%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+form input {
+  width: 100%;
+  background-color: transparent;
+  border: solid 1px;
+  height: 2.5em;
+  margin-bottom: 20px;
+}
+
+form textarea {
+  width: 100%;
+  background-color: transparent;
+  border: solid 1px;
+  height: 5em;
+  line-height: 2.5em;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+input[type]:not([type='submit']),
+textarea {
+  text-indent: 0.5em;
+}
+
+input[type='submit'] {
+  background-color: #beb45a;
+  padding: 0.5em 1em;
+}
+
+.virtual-anchor {
+  position: relative;
+  height: 0;
+  width: 0;
+  min-height: 0;
+  max-height: 0;
+  min-width: 0;
+  max-width: 0;
+}
+
+#a-propos {
+  bottom: 100px;
+}
+
+#galerie {
+  bottom: 42px;
+}
+
+#services {
+  bottom: 99px;
+}
+
+@media (max-width: 1200px) {
+  #about-me .about-me__introduction {
+    text-align: left;
+  }
+
+  #about-section .picture {
+    --_forced-size: 45vw;
+    max-width: var(--_forced-size);
+    max-height: var(--_forced-size);
+    min-height: var(--_forced-size);
+    min-width: var(--_forced-size);
+    height: var(--_forced-size);
+    width: var(--_forced-size);
+    outline: 0.2rem solid var(--about-bg-color);
+  }
+
+  #contact-section .picture img {
+    min-width: 50%;
+    min-height: 50%;
+  }
+
+  .picture.left::before {
+    width: 100%;
+    height: 18%;
+    position: absolute;
+    bottom: auto;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  #about-section {
+    padding-inline: 30px;
+    padding-block: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-me__title {
+    text-align: center;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+  }
+
+  #about-me {
+    left: 0;
+  }
+
+  #about-me .about-me__introduction,
+  #about-me p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #galerie {
+    bottom: 69px;
+  }
+
+  #contact {
+    bottom: 99px;
+  }
+
+  #about-section,
+  #contact-section {
+    padding-inline: 2em;
+    padding-block: 2em;
+  }
+
+  #contact-section .picture img {
+    max-width: 320px;
+    max-height: 319px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  #contact-section .container {
+    flex-direction: column;
+  }
+
+  #contact-section .picture.right {
+    margin-top: 1em;
+  }
+
+  .picture.right::before {
+    width: 100%;
+    max-width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  #services-section .title {
+    padding-block: 0;
+    padding-top: 1.5em;
+  }
+
+  #services-section .container {
+    flex-direction: column;
+  }
+
+  .service {
+    width: 540px;
+    max-width: 95%;
+    height: auto;
+    margin: 2em auto;
+  }
+
+  .service:nth-child(1) {
+    margin: 1em auto;
+  }
+
+  .service__description {
+    margin-bottom: 1em;
+  }
+
+  #services-section .container::before {
+    width: 15%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    z-index: 0;
+  }
+
+  #maugallery.gallery ~ .quote h2 {
+    min-height: 0;
+  }
+
+  #services-section ~ .quote h2 {
+    min-height: 0;
+  }
+
+  #services-section ~ .quote {
+    width: 440px;
+    min-height: 0;
+    min-width: 0;
+    height: auto;
+  }
+
+  .quote {
+    width: 350px;
+    height: auto;
+    padding-block: 3.5em;
+    transform: none;
+    transition: transform 0.4s;
+  }
+
+  .quote__text {
+    font-size: 1.35em;
+  }
+
+  #gallery-section .title {
+    padding-block: 0;
+    padding-top: 1em;
+  }
+
+  #maugallery.gallery .nav {
+    flex-direction: column;
+    text-align: center;
+    transform: scale(1.0125);
+  }
+
+  #maugallery.gallery .nav button {
+    width: 100%;
+  }
+
+  #carouselNinaCarducci .carousel-inner {
+    --_forced_height: 350px;
+    min-height: var(--_forced_height);
+    height: var(--_forced_height);
+    width: auto;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar .nav-item {
+    display: flex;
+    min-height: 63px;
+    align-items: center;
+    transform: scale(1.2);
+  }
+
+  #a-propos {
+    bottom: 391px;
+  }
+
+  #galerie {
+    bottom: 362px;
+  }
+
+  #services {
+    bottom: 390px;
+  }
+
+  #contact {
+    bottom: 390px;
+  }
+}
+
+@media (max-width: 600px) {
+  #services-section ~ .quote {
+    max-width: 75%;
+  }
+
+  .quote {
+    max-width: 89%;
+  }
+}
